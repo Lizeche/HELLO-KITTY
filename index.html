@@ -1,40 +1,47 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Tienda Hello Kitty</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="hello-kitty-logo.png" alt="Hello Kitty Logo" height="150" width="180">
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="hello-kitty-logo.png" alt="Logo de Hello Kitty" height="80">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+                    <span class="toggle-icon"></span>
+                </button>
+            </nav>
         </div>
-        <button class="barras" id="boton">
-            <div class="boton_menu" id="icono"></div>
-        </button>
-        <nav id="menu" class="desplegable">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contacto.html">Contáctanos</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="main">
         <section class="bienvenida">
-            <h1>Bienvenido a la Tienda Oficial de Hello Kitty y Amigos</h1>
-            <p>Descubre los peluches más adorables de Hello Kitty, My Melody, Keroppi y muchos más. ¡Colecciónalos todos!</p>
-            <a href="productos.html" class="btn">Ver Productos</a>
+            <div class="container">
+                <h1>Bienvenido a la Tienda Oficial de Hello Kitty y Amigos</h1>
+                <p>Descubre los peluches más adorables de Hello Kitty, My Melody, Keroppi y muchos más. ¡Colecciónalos todos!</p>
+                <a href="productos.html" class="btn">Ver Productos</a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Hello Kitty Shop. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Hello Kitty Shop. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
     <script src="main.js"></script>
