@@ -3,23 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Hello Kitty</title>
+    <title>Hello Kitty</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+  .imagen-opaca {
+    transition: opacity 0.5s; 
+  }
+
+  .imagen-opaca:hover {
+    opacity: 0.5; 
+  }
+        .search-box {
+    position: relative;
+    display: inline-block;
+  }
+
+  .search-box input[type="text"] {
+    padding: 8px 30px 8px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 200px;
+  }
+
+  .search-box .lupa {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+      
+</style>
+
+
 </head>
 <body>
     <header class="header">
         <div class="container nav-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="logo.png" alt="Logo de Hello Kitty" height="80">
+                    <img src="logo.jpeg" alt="Logo de Hello Kitty" height="80">
                 </a>
             </div>
             <nav class="nav">
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">NEW</a></li>
-                    <li><a href="galeria.html">CLLABS</a></li>
-                    <li><a href="productos.html">CHARACTERS</a></li>
-                    <li><a href="contacto.html">APPAREL</a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="gale.html">PRODUCTOS</a></li>
+                    <li><a href="productos.html">PROYECTOS</a></li>
+                    <li><a href="contacto.html">CONTACTANOS</a></li>
                 </ul>
                 <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
                     <span class="toggle-icon"></span>
@@ -27,43 +59,77 @@
             </nav>
         </div>
     </header>
+    <div class="search-box">
+  <input type="text" placeholder="Buscar...">
+  <img src="lupa.jpg" alt="Buscar" class="lupa" width="20px">
+</div>
+            <center>
+
+    <p><b>MISION</p></b>
+    <p>Crear alegría y felicidad a través de sus personajes y productos, fomentando la amistad y la amabilidad. </p>
+ <p><b>VISION</p></b>
+    <p>Un mundo donde las personas se lleven bien y se conecten a través de la amistad y el afecto. 
+ </p>
+        </center>
+
 
     <main class="main">
         <section class="bienvenida">
             <div class="container">
-                <h1>Bienvenido a la Tienda Oficial de Hello Kitty y Amigos</h1>
-                <p>Descubre los peluches más adorables de Hello Kitty, My Melody, Keroppi y muchos más. ¡Colecciónalos todos!</p>
-                <a href="productos.html" class="btn">Ver Productos</a>
+                 <center>
+          <button onclick="location.href='https://www.sanrio.com/collections/new'">
+<img src="Screenshot 2025-04-28 10.20.00.png" alt="" class="imagen-opaca" >
+          </center>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Hello Kitty Shop. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-      <center>
-<img src="Screenshot 2025-04-28 10.20.00.png" alt="">
-          </center>
-    <left>
-    <button onclick="location.href='https://tusitio.com'">
-  <img src="Scree10.30.15nshot 2025-04-28" alt="Botón Imagen" style="width:150px;">
+    
+    <center>
+    <button onclick="location.href='https://www.sanrio.com/collections/sweet-shortcake-series'">
+  <img src="boton1.png". alt="Botón Imagen" class="imagen-opaca"  style="width:400px;">
 </button>
-        </left>
-      <center>
-    <button onclick="location.href='https://tusitio.com'">
-  <img src="Screenshot 2025-04-28 10.32.56" alt="Botón Imagen" style="width:150px;">
+    <button onclick="location.href='https://www.sanrio.com/collections/u-sa-ha-na">
+  <img src="boton2.png" alt="Botón Imagen"  class="imagen-opaca"  style="width:400px;">
+</button>
+    <button onclick="location.href='https://www.sanrio.com/collections/fruit-veggies-series'">
+  <img src="boton3.png" alt="Botón Imagen"  class="imagen-opaca"  style="width:400px;">
 </button>
         </center>
-     <rigth>
-    <button onclick="location.href='https://tusitio.com'">
-  <img src="Screenshot 2025-04-28 10.34.42" alt="Botón Imagen" style="width:150px;">
-</button>
-        </rigth>
+
        <center>
-    <p>WHO'S YOUR FAVORITE?</p>
-   </center>
-<img src="foto.png" alt="">
+    <p><b>WHO'S YOUR FAVORITE?</p></b>
+    
+    <button onclick="location.href='https://www.sanrio.com/collections/hello-kitty'" class="imagen circular">
+    <img src="hello kity.png" alt="Imagen circular" style="width:250px; height:250px; border-radius: 50%;">
+        
+<button onclick="location.href='https://www.sanrio.com/collections/my-melody'"class="imagen circular">
+    <img src="my melody.png" alt="Imagen circular" style="width:250px; height:250px; border-radius: 50%;">
+    
+    <button onclick="location.href='https://www.sanrio.com/collections/cinnamoroll'"class="imagen circular">
+    <img src="cinamun.png" alt="Imagen circular" style="width:250x; height:250px; border-radius: 50%;">
+        
+        <button onclick="location.href='https://www.sanrio.com/collections/kuromi'"class="imagen circular">
+    <img src="kuromi.png" alt="Imagen circular" style="width:250px; height:250px; border-radius: 50%;">
+            
+            <button onclick="location.href='https://www.sanrio.com/collections/keroppi'"class="imagen circular">
+    <img src="rene.png" alt="Imagen circular" style="width:250px; height:250px; border-radius: 50%;">
+                
+                <button onclick="location.href='https://www.sanrio.com/collections/pompompurin'"class="imagen circular">
+    <img src="pompompurin.png" alt="Imagen circular" style="width:250px; height:250px; border-radius: 50%;">
+                    
+                    <button onclick="location.href='https://www.sanrio.com/collections/chococat'"class="imagen circular">
+    <img src="gato.png" alt="Imagen circular" style="width:250px; height:250px; border-radius: 50%;">
+                        
+                        <button onclick="location.href='https://www.sanrio.com/collections/pochacco'"class="imagen circular">
+    <img src="pochaco.png" alt="Imagen circular" style="width:250px; height:250px; border-radius: 50%;">
+                            
+                            <button onclick="location.href='https://www.sanrio.com/collections/littletwinstars'"class="imagen circular">
+    <img src="angeles.png" alt="Imagen circular" style="width:250px; height:250px; border-radius: 50%;">
+                                
+                                <button onclick="location.href='https://www.sanrio.com/collections/badtz-maru'"class="imagen circular">
+    <img src="pinguino.png" alt="Imagen circular" style="width:250px; height:250px; border-radius: 50%;">
+                                     </center>
+<img src="pie.png" alt="">
     <script src="main.js"></script>
 </body>
 </html>
