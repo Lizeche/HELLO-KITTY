@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0 20px;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.btn-container {
+  margin-top: 15px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 30px 0;
+}
+
+.tarjeta {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 240px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tarjeta h3 {
+  margin: 12px 0 6px;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.tarjeta p {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  padding: 0 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  color: #555;
+}
