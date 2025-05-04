@@ -1,4 +1,4 @@
-/* style.css */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -23,154 +23,118 @@ header img {
   margin: 0 auto;
 }
 
-.barras {
+.nav-container {
   display: flex;
-  justify-content: flex-end;
-  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
-.boton_menu {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  background-image: url('https://cdn-icons-png.flaticon.com/512/1828/1828859.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
 }
 
-nav.desplegable {
+.hamburguesa {
   display: none;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 1rem;
-  text-align: center;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
 }
 
-nav.desplegable ul {
+.nav-links {
+  display: flex;
+  gap: 30px;
   list-style: none;
 }
 
-nav.desplegable ul li {
-  margin: 10px 0;
-}
-
-nav.desplegable ul li a {
-  color: #94FAF1;
+.nav-links a {
+  color: white;
   text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-nav.desplegable ul li a:hover {
-  color: #94FAF1;
+.nav-links a:hover {
+  color: #ffcc00;
 }
 
-nav.desplegable.activo {
-  display: flex;
-}
+/* Estilos móviles */
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: block;
+  }
 
-/* computadora */
-.barras {
+  .nav-links {
     display: none;
-}
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 999;
+  }
 
-.desplegable {
-  background-color: rgba(0, 0, 0, 0.7); 
-}
-
-ul {
+  .nav-links.activo {
     display: flex;
-    flex-direction: row;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
 }
 
-ul li {
-    padding: 10px;
-    list-style: none;
+.main, .contenido {
+  padding: 40px;
 }
 
-ul li a {
-    color:green;
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.1rem;
+.search-box {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
 }
 
-nav ul li:hover {
-    background: #F04D3D;
+.search-box input[type="text"] {
+  padding: 8px 30px 8px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 200px;
 }
 
-/* tablet */
-@media (max-width: 850px) {
-    .barras {
-        background-color: #2E4172;
-        display: block;
-    }
-
-    .desplegable {
-        background: none;
-        transform: translate(-100%);
-        transition: 0.5s;
-        font-size: 1.5rem;
-        width: 50%;
-    }
-
-    ul {
-        flex-direction: column;
-        height: 100vh;
-    }
-
-    a {
-        font-size: 1.5rem;
-        padding: 20px 0 20px 20px;
-        display: block;
-        text-align: left;
-    }
-
-    .boton_menu {
-        background-image: url('hamburguesa-removebg-preview.png');
-        background-color: #2E4172;
-        background-repeat: no-repeat;
-        height: 30px;
-        width: 30px;
-        background-size: 30px 30px;
-        background-position: center;
-    }
-
-    button {
-        margin: 10px 10px 10px 20px;
-        border: none;
-    }
-
-    /* con esta clase cierro y abro el menú con toggle */
-    .abrir_menu {
-        background: rgba(30, 30, 30, 0.6);
-        backdrop-filter: blur(2px);
-        transform: translate(0%);
-        width: 50%;
-        transition: 0.5s;
-    }
-
-    /* con esta clase cambio las barras por una x */
-    .colocar_x {
-        background-image: url('x.png');
-        background-color: #2E4172;
-        background-repeat: no-repeat;
-        height: 30px;
-        width: 30px;
-        background-size: 30px 30px;
-        background-position: center;
-    }
+.search-box .lupa {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
-/* móvil */
-@media (max-width: 500px) {
-    .desplegable {
-        width: 100%;
-        height: 100vh;
-        font-size: 1.6rem;
-    }
+.imagen-opaca {
+  transition: opacity 0.5s;
+}
+
+.imagen-opaca:hover {
+  opacity: 0.5;
+}
+
+.boton-img {
+  width: 400px;
+  margin: 10px;
+}
+
+.imagen.circular img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
