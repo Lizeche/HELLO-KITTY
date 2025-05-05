@@ -1,24 +1,33 @@
-/* Reset */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fondo del sitio */
-body {
-  background-image: url('fondo.gif');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  font-family: Arial, sans-serif;
+.imagen-responsiva {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
-/* Header */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1604908176785-97fd0c5dbb6b');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
 header {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
 }
 
 .nav-container {
@@ -34,28 +43,6 @@ header {
   color: white;
 }
 
-/* Menú y enlaces */
-.nav ul {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-}
-
-.nav ul li {
-  padding: 10px;
-}
-
-.nav ul li a {
-  color: green;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-.nav ul li:hover {
-  background: #F04D3D;
-}
-
-/* Botón hamburguesa */
 .hamburguesa {
   display: none;
   font-size: 28px;
@@ -63,37 +50,98 @@ header {
   cursor: pointer;
 }
 
-/* Responsive - Tablets y móviles */
-@media (max-width: 850px) {
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Estilos móviles */
+@media (max-width: 768px) {
   .hamburguesa {
     display: block;
   }
 
-  .nav {
+  .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    z-index: 100;
+    top: 55px;
+    right: 20px;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 999;
   }
 
-  .nav.activo {
+  .nav-links.activo {
     display: flex;
   }
 
-  .nav ul {
-    flex-direction: column;
-    gap: 10px;
+  .nav-links a {
+    margin: 10px 0;
   }
+}
 
-  .nav ul li a {
-    font-size: 1.5rem;
-    color: white;
-    padding: 10px;
-    display: block;
-  }
+.main, .contenido {
+  padding: 40px;
+}
+
+.search-box {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+.search-box input[type="text"] {
+  padding: 8px 30px 8px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 200px;
+}
+
+.search-box .lupa {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.imagen-opaca {
+  transition: opacity 0.5s;
+}
+
+.imagen-opaca:hover {
+  opacity: 0.5;
+}
+
+.boton-img {
+  width: 400px;
+  margin: 10px;
+}
+
+.imagen.circular img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
